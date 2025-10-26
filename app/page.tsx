@@ -207,11 +207,11 @@ export default function ChatPage() {
   }
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark bg-gray-950' : 'bg-gray-50'}`}>
-      <div className={`min-h-screen flex items-center justify-center p-4 transition-colors duration-300 ${isDark ? 'bg-gradient-to-br from-gray-950 to-gray-900' : 'bg-gradient-to-br from-gray-50 to-gray-100'}`}>
+    <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`}>
+      <div className={`min-h-screen flex items-center justify-center p-4 transition-colors duration-500 ${isDark ? 'bg-gradient-to-br from-gray-950 via-blue-950 to-gray-900' : 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'}`}>
         <div className="w-full max-w-2xl flex flex-col h-[90vh] md:h-[85vh]">
           {/* Header */}
-          <div className={`flex items-center justify-between p-4 md:p-6 rounded-t-2xl shadow-md ${isDark ? 'bg-gray-900 border-b border-gray-800' : 'bg-white border-b border-gray-200'}`}>
+          <div className={`flex items-center justify-between p-4 md:p-6 rounded-t-2xl shadow-lg backdrop-blur-xl border ${isDark ? 'bg-gray-900/90 border-gray-800' : 'bg-white/90 border-gray-200'}`}>
             <div className="flex items-center gap-3">
               <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-sm ${isDark ? 'bg-blue-900 text-blue-300' : 'bg-blue-100 text-blue-700'}`}>
                 L
@@ -241,7 +241,7 @@ export default function ChatPage() {
 
           {/* Chat Area */}
           <ScrollArea
-            className={`flex-1 p-4 md:p-6 rounded-b-2xl shadow-md overflow-hidden ${isDark ? 'bg-gray-900' : 'bg-white'}`}
+            className={`flex-1 p-4 md:p-6 shadow-lg overflow-hidden backdrop-blur-xl ${isDark ? 'bg-gray-900/90' : 'bg-white/90'}`}
             ref={scrollRef}
           >
             <div className="space-y-4">
@@ -271,7 +271,7 @@ export default function ChatPage() {
           {/* Input Area */}
           <form
             onSubmit={handleSendMessage}
-            className={`p-4 md:p-6 rounded-b-2xl shadow-md border-t ${isDark ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}
+            className={`p-4 md:p-6 rounded-b-2xl shadow-lg border-t backdrop-blur-xl ${isDark ? 'bg-gray-900/90 border-gray-800' : 'bg-white/90 border-gray-200'}`}
           >
             <div className="flex gap-3">
               <Input
